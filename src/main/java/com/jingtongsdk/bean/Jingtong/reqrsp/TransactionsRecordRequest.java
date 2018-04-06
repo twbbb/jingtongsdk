@@ -11,7 +11,7 @@ public class TransactionsRecordRequest extends JingtongBaseRequest
 	
 	public String requestUrl()
 	{
-		return "/v2/accounts/{:address}/transactions";
+		return "/v2/accounts/{:address}/transactions?results_per_page={:results_per_page}&marker={:marker}";
 	}
 	
 	public String requestType()

@@ -5,6 +5,7 @@ import java.util.List;
 import com.jingtongsdk.bean.JingtongResponse;
 import com.jingtongsdk.bean.Jingtong.reqrsp.Amount;
 import com.jingtongsdk.bean.Jingtong.reqrsp.BalancesRequest;
+import com.jingtongsdk.bean.Jingtong.reqrsp.Marker;
 import com.jingtongsdk.bean.Jingtong.reqrsp.Order;
 import com.jingtongsdk.bean.Jingtong.reqrsp.OrderBookAsksRequest;
 import com.jingtongsdk.bean.Jingtong.reqrsp.OrderBookBidsRequest;
@@ -234,7 +235,16 @@ public class JingtongRequestUtilsTest extends TestCase
 	public void testTransactionsRecordRequest() throws Exception
 	{
 		TransactionsRecordRequest oblr = new TransactionsRecordRequest();
-		oblr.setAddress("jHSvWWZtXS3xdh1YqBHXh2B3Xm2g4PbrSv");
+		oblr.setAddress("j4ucmztRMNh3y3vkMP2KiJ9vkfbUR4pmpM");
+		Marker marker = new Marker();
+		marker.setLedger(9057339);
+		marker.setSeq(1);
+		oblr.setMarker(marker);
+		oblr.setResults_per_page(5);
+//		 "marker": {
+//		    "ledger": 9057339,
+//		    "seq": 1
+//		  }
 		JingtongResponse jr = JingtongRequestUtils.sendRequest(oblr);
 		assertEquals(true, jr.isSuccess());
 	}

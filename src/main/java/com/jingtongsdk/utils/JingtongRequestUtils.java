@@ -92,6 +92,11 @@ public class JingtongRequestUtils
 						{
 							url = url.replace("{:" + fieldName + "}", value.toString());
 						}
+						else
+						{
+							url = url.replace("{:" + fieldName + "}", "");
+						}
+						break;
 						
 					}
 				}
