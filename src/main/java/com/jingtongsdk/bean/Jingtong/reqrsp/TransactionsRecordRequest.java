@@ -6,7 +6,7 @@ import com.jingtongsdk.utils.JingtongRequstConstants;
 public class TransactionsRecordRequest extends JingtongBaseRequest
 {
 	private String address;//井通钱包地址
-	private Integer results_per_page; //返回的每页数据量，默认每页10项
+	private Integer results_per_page=10; //返回的每页数据量，默认每页10项
 	private Marker marker;
 	
 	public String requestUrl()
