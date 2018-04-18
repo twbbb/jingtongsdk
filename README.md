@@ -1,2 +1,2 @@
 # jingtongsdk
-井通SDKV2
+井通APIV2封装
